@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="3.125" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -413,6 +413,35 @@
 <rectangle x1="0.4572" y1="1.8542" x2="0.8128" y2="2.8702" layer="51"/>
 <rectangle x1="1.7272" y1="1.8542" x2="2.0828" y2="2.8702" layer="51"/>
 </package>
+<package name="TCM8230MD">
+<wire x1="-3.095625" y1="3.01625" x2="2.936875" y2="3.01625" width="0.127" layer="23"/>
+<wire x1="2.936875" y1="3.01625" x2="2.936875" y2="-3.01625" width="0.127" layer="23"/>
+<wire x1="2.936875" y1="-3.01625" x2="-3.095625" y2="-3.01625" width="0.127" layer="23"/>
+<wire x1="-3.095625" y1="-3.01625" x2="-3.095625" y2="3.01625" width="0.127" layer="23"/>
+<smd name="PVDD" x="1.825625" y="3.254375" dx="1.016" dy="0.508" layer="1" rot="R90"/>
+<smd name="ECLK" x="0.873125" y="3.254375" dx="1.016" dy="0.508" layer="1" rot="R90"/>
+<smd name="RST" x="0" y="3.254375" dx="1.016" dy="0.508" layer="1" rot="R90"/>
+<smd name="SCL" x="-0.873125" y="3.254375" dx="1.016" dy="0.508" layer="1" rot="R90"/>
+<smd name="SDA" x="-1.74625" y="3.254375" dx="1.016" dy="0.508" layer="1" rot="R90"/>
+<smd name="DVDD" x="-3.33375" y="1.984375" dx="1.016" dy="0.508" layer="1" rot="R180"/>
+<smd name="DVSS" x="-3.33375" y="1.031875" dx="1.016" dy="0.508" layer="1" rot="R180"/>
+<smd name="VD" x="-3.33375" y="0.15875" dx="1.016" dy="0.508" layer="1" rot="R180"/>
+<smd name="HD" x="-3.33375" y="-0.714375" dx="1.016" dy="0.508" layer="1" rot="R180"/>
+<smd name="DCLK" x="-3.33375" y="-1.5875" dx="1.016" dy="0.508" layer="1" rot="R180"/>
+<smd name="D0" x="-1.984375" y="-3.254375" dx="1.016" dy="0.508" layer="1" rot="R270"/>
+<smd name="D1" x="-1.031875" y="-3.254375" dx="1.016" dy="0.508" layer="1" rot="R270"/>
+<smd name="D2" x="-0.15875" y="-3.254375" dx="1.016" dy="0.508" layer="1" rot="R270"/>
+<smd name="D3" x="0.714375" y="-3.254375" dx="1.016" dy="0.508" layer="1" rot="R270"/>
+<smd name="IOVSS" x="1.5875" y="-3.254375" dx="1.016" dy="0.508" layer="1" rot="R270"/>
+<smd name="D7" x="3.175" y="1.5875" dx="1.016" dy="0.508" layer="1" rot="R180"/>
+<smd name="D6" x="3.175" y="0.635" dx="1.016" dy="0.508" layer="1" rot="R180"/>
+<smd name="D5" x="3.175" y="-0.238125" dx="1.016" dy="0.508" layer="1" rot="R180"/>
+<smd name="D4" x="3.175" y="-1.11125" dx="1.016" dy="0.508" layer="1" rot="R180"/>
+<smd name="IOVDD" x="3.175" y="-1.984375" dx="1.016" dy="0.508" layer="1" rot="R180"/>
+<text x="-8.89" y="3.81" size="1.27" layer="25">&gt;NAME</text>
+<text x="2.54" y="-5.08" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-2.619375" y1="-2.54" x2="2.460625" y2="2.54" layer="41"/>
+</package>
 </packages>
 <symbols>
 <symbol name="1.8V">
@@ -652,6 +681,34 @@
 <pin name="D" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
 <pin name="S" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
 </symbol>
+<symbol name="TCM8230MD">
+<pin name="DVDD" x="-25.4" y="10.16" length="middle" direction="sup"/>
+<pin name="DVSS" x="-25.4" y="5.08" length="middle" direction="sup"/>
+<pin name="VD" x="-25.4" y="0" length="middle"/>
+<pin name="HD" x="-25.4" y="-5.08" length="middle"/>
+<pin name="DCLK" x="-25.4" y="-10.16" length="middle"/>
+<pin name="D0" x="-10.16" y="-25.4" length="middle" rot="R90"/>
+<pin name="D1" x="-5.08" y="-25.4" length="middle" rot="R90"/>
+<pin name="D2" x="0" y="-25.4" length="middle" rot="R90"/>
+<pin name="D3" x="5.08" y="-25.4" length="middle" rot="R90"/>
+<pin name="IOVSS" x="10.16" y="-25.4" length="middle" direction="sup" rot="R90"/>
+<pin name="IOVDD" x="25.4" y="-10.16" length="middle" direction="sup" rot="R180"/>
+<pin name="D4" x="25.4" y="-5.08" length="middle" rot="R180"/>
+<pin name="D5" x="25.4" y="0" length="middle" rot="R180"/>
+<pin name="D6" x="25.4" y="5.08" length="middle" rot="R180"/>
+<pin name="D7" x="25.4" y="10.16" length="middle" rot="R180"/>
+<pin name="PVDD" x="10.16" y="25.4" length="middle" direction="sup" rot="R270"/>
+<pin name="ECLK" x="5.08" y="25.4" length="middle" rot="R270"/>
+<pin name="RST" x="0" y="25.4" length="middle" rot="R270"/>
+<pin name="SCL" x="-5.08" y="25.4" length="middle" rot="R270"/>
+<pin name="SDA" x="-10.16" y="25.4" length="middle" rot="R270"/>
+<wire x1="-20.32" y1="20.32" x2="20.32" y2="20.32" width="0.254" layer="94"/>
+<wire x1="20.32" y1="20.32" x2="20.32" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-20.32" x2="-20.32" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="-20.32" y1="-20.32" x2="-20.32" y2="20.32" width="0.254" layer="94"/>
+<text x="-22.86" y="22.86" size="1.778" layer="95">&gt;NAME</text>
+<text x="15.24" y="-25.4" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="1.8V">
@@ -779,6 +836,47 @@ in a wide variety of applications.</description>
 <connect gate="G$2" pin="D" pad="5 6"/>
 <connect gate="G$2" pin="G" pad="4"/>
 <connect gate="G$2" pin="S" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TCM8230">
+<description>The TCM8230MD(A) is a camera module which includes area color image sensor embedded with camera signal
+processor that meets with VGA format. In the sensor area 492 vertical and 660 horizontal signal pixels,
+and the image size meets with 1/6 inch optical Format. Use of the CMOS process enables low power
+consumption operations. It also provides excellent color reproduction through its primary color filter,
+and embedded camera signal processor enables small and simple camera system. And this module can be
+assembled by the socket which is suitable for the reflow soldering. So it is fit to use as an image input device
+for digital still cameras, PC cameras and mobile devices.</description>
+<gates>
+<gate name="G$1" symbol="TCM8230MD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="MD" package="TCM8230MD">
+<connects>
+<connect gate="G$1" pin="D0" pad="D0"/>
+<connect gate="G$1" pin="D1" pad="D1"/>
+<connect gate="G$1" pin="D2" pad="D2"/>
+<connect gate="G$1" pin="D3" pad="D3"/>
+<connect gate="G$1" pin="D4" pad="D4"/>
+<connect gate="G$1" pin="D5" pad="D5"/>
+<connect gate="G$1" pin="D6" pad="D6"/>
+<connect gate="G$1" pin="D7" pad="D7"/>
+<connect gate="G$1" pin="DCLK" pad="DCLK"/>
+<connect gate="G$1" pin="DVDD" pad="DVDD"/>
+<connect gate="G$1" pin="DVSS" pad="DVSS"/>
+<connect gate="G$1" pin="ECLK" pad="ECLK"/>
+<connect gate="G$1" pin="HD" pad="HD"/>
+<connect gate="G$1" pin="IOVDD" pad="IOVDD"/>
+<connect gate="G$1" pin="IOVSS" pad="IOVSS"/>
+<connect gate="G$1" pin="PVDD" pad="PVDD"/>
+<connect gate="G$1" pin="RST" pad="RST"/>
+<connect gate="G$1" pin="SCL" pad="SCL"/>
+<connect gate="G$1" pin="SDA" pad="SDA"/>
+<connect gate="G$1" pin="VD" pad="VD"/>
 </connects>
 <technologies>
 <technology name=""/>
